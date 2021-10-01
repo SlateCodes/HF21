@@ -1,3 +1,10 @@
-const { execSync } = require("child_process");
+function main(args) {
 
-const result = await execSync("ls").toString()
+    const { execSync } = require("child_process");
+    const result = await execSync("ls").toString();
+
+    return result;
+
+}
+
+main("ls");
