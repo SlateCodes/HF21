@@ -8,7 +8,7 @@ async function main(args) {
         result = e;
     }
 
-    return typeof result === "object" ? result.message : result;
+    return result.message ? result.message : result;
 
 }
 
