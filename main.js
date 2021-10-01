@@ -1,10 +1,15 @@
-function main(args) {
+async function main(args) {
 
     const { execSync } = require("child_process");
-    const result = await execSync("ls").toString();
+    let result;
+    try {
+        result = await execSync("ls").toString();
+    } catch (e) {
+        result = e;
+    }
 
-    return result;
+    return typeof result === "object" ? result.message : result;
 
 }
 
-main("ls");
+await main("ls");
