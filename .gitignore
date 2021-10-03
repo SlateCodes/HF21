@@ -106,3 +106,6 @@ dist
 # Java files
 .class
 .java
+
+# .net files
+.cs
